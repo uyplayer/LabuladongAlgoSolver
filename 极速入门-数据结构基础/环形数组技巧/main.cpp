@@ -25,10 +25,13 @@ public:
 
     T get_value(size_t index) const {
         if (index >= size) {
-            throw std::out_of_range("Index out of range");
+            throw std::out_of_range("index 超过 索引");
         }
         return data[(start + index) % capacity];
     }
+
+
+
 
     bool is_empty() const {
         return size == 0;

@@ -7,4 +7,4 @@ set(
 )
 
 
-add_executable(queue_stack "${source}")
+add_executable(CycleArray "${source}")
