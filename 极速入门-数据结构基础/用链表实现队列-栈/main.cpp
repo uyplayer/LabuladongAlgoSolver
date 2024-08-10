@@ -3,7 +3,6 @@
 //
 
 
-
 #include <iostream>
 
 template<typename T>
@@ -18,7 +17,7 @@ struct Node {
 template<typename T>
 class LinkedList {
 public:
-    LinkedList() : head(nullptr) ,tail(nullptr){
+    LinkedList() : head(nullptr), tail(nullptr) {
     }
 
     ~LinkedList() {
@@ -80,6 +79,7 @@ public:
         }
         return head->data;
     }
+
 private:
     void clear() {
         Node<T> *current = head;
@@ -110,11 +110,11 @@ int main() {
 
     // 打印链表
     std::cout << "链表内容: ";
-    list.print_list();  // 输出: 10 20 30
+    list.print_list(); // 输出: 10 20 30
 
     // 访问头部元素
     try {
-        std::cout << "链表头部元素: " << list.front() << std::endl;  // 输出: 10
+        std::cout << "链表头部元素: " << list.front() << std::endl; // 输出: 10
     } catch (const std::runtime_error &e) {
         std::cerr << "错误: " << e.what() << std::endl;
     }
@@ -122,17 +122,17 @@ int main() {
     // 弹出头部元素
     list.pop_head();
     std::cout << "删除头部元素后链表内容: ";
-    list.print_list();  // 输出: 20 30
+    list.print_list(); // 输出: 20 30
 
     // 弹出尾部元素
     list.pop_tail();
     std::cout << "删除尾部元素后链表内容: ";
-    list.print_list();  // 输出: 20
+    list.print_list(); // 输出: 20
 
     // 再次弹出头部元素
     list.pop_head();
     std::cout << "删除头部元素后链表内容: ";
-    list.print_list();  // 输出: (链表为空)
+    list.print_list(); // 输出: (链表为空)
 
     try {
         std::cout << "链表头部元素: " << list.front() << std::endl;

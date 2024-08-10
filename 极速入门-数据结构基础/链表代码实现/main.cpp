@@ -12,7 +12,7 @@ struct Node {
 template<typename T>
 class LinkedList {
 public:
-    LinkedList() : head(nullptr) ,tail(nullptr){
+    LinkedList() : head(nullptr), tail(nullptr) {
     }
 
     ~LinkedList() {
@@ -55,7 +55,7 @@ public:
         if (head->next == nullptr) {
             delete head;
             head = nullptr;
-            tail= nullptr;
+            tail = nullptr;
             return;
         }
 
@@ -67,6 +67,7 @@ public:
         current->next = nullptr;
         tail = current;
     }
+
 private:
     void clear() {
         Node<T> *current = head;
