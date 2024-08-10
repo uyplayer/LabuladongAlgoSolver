@@ -27,9 +27,8 @@ public:
         if (index >= size) {
             throw std::out_of_range("index 超过 索引");
         }
-        return data[(start + index) % capacity];
+        return data[(start + index) % capacity]; /**/
     }
-
 
     bool is_empty() const {
         return size == 0;
@@ -52,7 +51,7 @@ private:
 };
 
 int main() {
-    CycleArray<int> arr(100);
+    CycleArray<int> arr(5);
 
     arr.add_value(1);
     arr.add_value(2);
@@ -66,8 +65,16 @@ int main() {
     std::cout << std::endl;
 
     arr.add_value(6);
-
+    // [6, 2, 3, 4, 5]
     std::cout << "添加 6: " << std::endl;
+    for (size_t i = 0; i < arr.get_size(); ++i) {
+        std::cout << arr.get_value(i) << " ";
+    }
+
+    std::cout << std::endl;
+    arr.add_value(7);
+    // [6, 7, 3, 4, 5]
+    std::cout << "添加 7: " << std::endl;
     for (size_t i = 0; i < arr.get_size(); ++i) {
         std::cout << arr.get_value(i) << " ";
     }
