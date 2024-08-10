@@ -97,5 +97,11 @@ int main() {
     list.print_list();
     list.pop_tail();
     list.print_list();
+    list.add_value(1);
+    list.add_value(2);
+    list.add_value(3);
+    list.add_value(4);
+    list.add_value(5);
+    list.print_list();
     return 0;
 }
