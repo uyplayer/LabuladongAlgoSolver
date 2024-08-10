@@ -5,9 +5,6 @@ template<typename T>
 class CycleArray {
 public:
     explicit CycleArray(size_t capacity): start(0), end(0), size(0), capacity(capacity) {
-
-
-
         data = new T[capacity];
     }
 
@@ -32,8 +29,6 @@ public:
         }
         return data[(start + index) % capacity];
     }
-
-
 
 
     bool is_empty() const {
