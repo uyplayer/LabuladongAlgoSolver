@@ -5,6 +5,8 @@ set(
 
         source
         main.cpp
+        LinkedListDeque.cpp
+        ArrayDeque.cpp
 
 )
 
