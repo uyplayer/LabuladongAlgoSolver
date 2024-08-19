@@ -21,5 +21,10 @@ private:
     size_t bucket_count;
 
 
+    size_t  HashFuck(const Tk& key){
+        std::hash<Tk> hasher;
+        return hasher(key) % bucket_count;
+    }
+
 
 };
