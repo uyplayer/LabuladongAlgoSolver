@@ -4,7 +4,8 @@
 
 #include <iostream>
 #include <list>
-
+#include <vector>
+#include <algorithm>
 
 template<typename Tk,typename Tv>
 class ChainingHashMap{
@@ -16,6 +17,9 @@ private:
             KVNode(Tk key,Tv value):key(key),value(value){};
     };
 
+    std::vector<std::list<KVNode>> buckets;
+    size_t bucket_count;
 
-    std::list<KVNode> hashMap;
+
+
 };
