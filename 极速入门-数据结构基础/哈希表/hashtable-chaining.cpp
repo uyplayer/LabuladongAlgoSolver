@@ -6,6 +6,7 @@
 #include <list>
 #include <vector>
 #include <algorithm>
+#include <optional>
 
 template<typename Tk, typename Tv>
 class ChainingHashMap {
@@ -35,7 +36,7 @@ public:
 
     void insert(const Tk &key, const Tv &value) {
 
-        size_t index = hashFunction(key);
+        size_t index = HashFuck(key);
         // key 存在
         for (auto &node: buckets[index]) {
             if (node.key == key) {
@@ -47,19 +48,19 @@ public:
         buckets[index].emplace_back(key, value);
     }
 
-    Tv *find(const Tk &key) {
-        size_t index = hashFunction(key);
+    std::optional<Tv> find(const Tk &key) {
+        size_t index = HashFuck(key);
         for (auto &node: buckets[index]) {
             if (node.key == key) {
                 return &node.value;
             }
         }
-        return nullptr;
+        return std::nullopt;
     }
     // 删除操作
     bool erase(const Tk &key) {
 
-        size_t index = hashFunction(key);
+        size_t index = HashFuck(key);
         // 先找key 对应的桶
         auto &bucket = buckets[index];
         // 遍历对应的node 和 key
