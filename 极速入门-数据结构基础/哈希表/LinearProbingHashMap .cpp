@@ -75,8 +75,8 @@ public:
                     Node *tmp = table[index];
                     table[index] = nullptr;
                     size--;
-                    put(temp->key, temp->value);
-                    delete temp;
+                    put(tmp->key, tmp->value);
+                    delete tmp;
                     index = (index + 1) % capacity;
                 }
                 return;
