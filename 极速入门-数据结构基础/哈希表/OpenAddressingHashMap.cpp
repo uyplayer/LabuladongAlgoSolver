@@ -48,7 +48,7 @@ public:
 
     int get(int key) {
         int index = findKeyIndex(key);
-        return table[index] == nullptr ? -1 : table[index]->val;
+        return table[index] == nullptr ? -1 : table[index]->value;
     }
 
     void remove(int key) {
