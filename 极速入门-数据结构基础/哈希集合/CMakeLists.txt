@@ -3,7 +3,7 @@ set(
         source
 
         main.cpp
-        "HashSet .cpp"
+        HashSet.cpp
 )
 
 
