@@ -4,6 +4,7 @@ set(
 
         source
         main.cpp
+        binary-tree-basic.cpp
 
 )
 
