@@ -5,7 +5,7 @@ set(
         source
         main.cpp
         binary-tree-basic.cpp
-        traverse.cpp
+        binary-tree-traverse-basic.cpp
 
 )
 
