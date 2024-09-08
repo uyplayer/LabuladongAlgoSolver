@@ -158,13 +158,13 @@ void levelOrderTraverse4(TreeNode* root)
         q.pop();
         // 访问 cur 节点，同时知道它的路径权重和
         std::cout << "depth = " << cur.depth << ", val = " << cur.node->value << std::endl;
-
         // 把 cur 的左右子节点加入队列
         if (cur.node->left != nullptr)
         {
             q.push(State{cur.node->left, cur.depth + 1});
         }
-        if (cur.node->right != nullptr) {
+        if (cur.node->right != nullptr)
+        {
             q.push(State(cur.node->right, cur.depth + 1));
         }
     }
