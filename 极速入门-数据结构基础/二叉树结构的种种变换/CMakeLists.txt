@@ -7,6 +7,7 @@ set(
         binary-tree-basic.cpp
         binary-tree-traverse-basic.cpp
         n-ary-tree-traverse-basic.cpp
+        tree-map-basic.cpp
 
 )
 
